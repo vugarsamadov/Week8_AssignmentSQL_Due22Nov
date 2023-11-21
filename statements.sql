@@ -93,7 +93,7 @@ SELECT E.Name, count FROM (SELECT PS.EmployeeId, COUNT(*) as count
                            FROM Product_Sales PS
                            GROUP BY PS.EmployeeId) A left join Employees E ON E.Id = A.EmployeeId
 -- 5
-SELECT TOP 1 B.Name, count
+SELECT TOP 1 B.Name
 FROM ( SELECT BranchId, COUNT(*) as count
 FROM Product_Sales PS WHERE DATEDIFF(day,PS.SaleDate,GETDATE()) = 0
 GROUP BY BranchId ) A left join Branches B ON B.Id = A.BranchId order by count desc
