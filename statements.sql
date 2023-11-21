@@ -1,5 +1,5 @@
-create database MarketDB1;
-USE MarketDB1;
+create database MarketDB2;
+USE MarketDB2;
 
 create table Occupation
 (
